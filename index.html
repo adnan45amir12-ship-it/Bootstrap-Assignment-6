@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Page</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Students Page</h1>
+
+        <!-- Filter Button -->
+        <button id="filterBtn" class="filter-btn">
+            Filter Students
+        </button>
+
+    </div>
+
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+
+    <!-- Offcanvas -->
+    <div id="offcanvas" class="offcanvas">
+
+        <div class="offcanvas-header">
+            <h2>FILTER STUDENTS</h2>
+
+            <button id="closeBtn" class="close-btn">
+                &times;
+            </button>
+        </div>
+
+
+        <div class="offcanvas-body">
+
+            <form id="filterForm">
+
+                <!-- Batch -->
+                <label for="batch">Batch #</label>
+
+                <select id="batch" name="batch">
+                    <option value="">Select Batch</option>
+                    <option value="Batch 1">Batch 1</option>
+                    <option value="Batch 2">Batch 2</option>
+                    <option value="Batch 3">Batch 3</option>
+                    <option value="Batch 4">Batch 4</option>
+                </select>
+
+
+                <!-- Gender -->
+                <label>Gender</label>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                </div>
+
+
+                <!-- Age -->
+                <label for="age">Age</label>
+
+                <div class="age-box">
+                    <span>Range</span>
+                    <span>(16 - 50)</span>
+                </div>
+
+                <input
+                    type="range"
+                    id="age"
+                    name="age"
+                    min="16"
+                    max="50"
+                    value="16"
+                >
+
+                <div class="range-output">
+                    Age: <span id="ageValue">16</span>
+                </div>
+
+
+                <!-- Fees -->
+                <label>Fees</label>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="fees" value="paid">
+                        Paid
+                    </label>
+
+                    <label>
+                        <input type="radio" name="fees" value="unpaid">
+                        Unpaid
+                    </label>
+                </div>
+
+
+                <!-- Apply Button -->
+                <button type="submit" class="apply-btn">
+                    Apply
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
